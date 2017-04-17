@@ -1,0 +1,16 @@
+rootProject.name = 'depo-wagon'
+include ':model'
+include ':database'
+include ':dao-api'
+include ':dao'
+include ':service-api'
+include ':service'
+include ':rest-app'
+
+project(':model').projectDir = "$rootDir/model" as File
+project(':database').projectDir = "$rootDir/database" as File
+project(':dao-api').projectDir = "$rootDir/dao-api" as File
+project(':dao').projectDir = "$rootDir/dao" as File
+project(':service-api').projectDir = "$rootDir/service-api" as File
+project(':service').projectDir = "$rootDir/service" as File
+project(':rest-app').projectDir = "$rootDir/rest-app" as File
