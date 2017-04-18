@@ -1,5 +1,6 @@
 
 apply plugin: 'war'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 description = ''
 dependencies {
@@ -13,4 +14,12 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version:'4.12'
     testCompile group: 'org.springframework', name: 'spring-test', version:'4.3.6.RELEASE'
     testCompile group: 'org.easymock', name: 'easymock', version:'3.4'
+}
+
+gretty {
+  httpPort = 8088
+   servletContainer = 'jetty9' //tomcat7 or tomcat8
+  contextPath='/'
+
+
 }
